@@ -1,15 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Fenêtre1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./style.css">
+    <title>Dynamic Calendar</title>
+
 </head>
+
 <body>
-<p>Bonjour tout le monde comment allez vous</p>
 
-<h1> dmkemfpnepfnpejfnd;</h1>
+<div class="topnav">
+    <!-- <a class="active" href="#gestionRdv">Gestion des rendez-vous</a> -->
+    <div class="dropdown">
+        <button class="dropbtn">Gestion des rendez-vous
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Prendre un rendez-vous</a>
+            <a href="#">Modifier un rendez-vous</a>
+            <a href="#">Annuler un rendez-vous</a>
+            <a href="#">Consulter vos rendez-vous</a>
+        </div>
+    </div>
+    <a href="#consultDoc">Consulter Documents</a>
+    <a href="#contactMed"><i class="fa fa-fw fa-envelope"></i>Contacter un medecin</a>
+    <a href="#contactCliniq"><i class="fa fa-fw fa-envelope"></i>Contacter une clinique</a>
+    <!-- <a href="#mesPro">Mes professionnels</a> -->
+    <div class="dropdown">
+        <button class="dropbtn">Mes professionnels
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">monMedecin</a>
+            <a href="#">monInfirmier</a>
+            <a href="#">monInterne</a>
+        </div>
 
-<h1> dmkemfpnepfnpejfnd;</h1>
+    </div>
+    <a href="#deconnect"><i class="fa fa-fw fa-user"></i> Deconnexion</a>
+</div>
+
+<!-- Main wrapper for the calendar application -->
+<div class="wrapper">
+    <div class="container-calendar">
+        <div id="left">
+            <h1>Calendrier personnel</h1>
+            <div id="event-section">
+                <h3>Ajouter un rendez-vous</h3>
+                <input type="date" id="eventDate">
+                <input type="text" id="eventTitle" placeholder="Raison du rendez-vous">
+                <input type="text" id="eventDescription" placeholder="Description">
+                <button id="addEvent" onclick="addEvent()">
+                    Add
+                </button>
+            </div>
+            <div id="reminder-section">
+                <h3>Rappels</h3>
+                <!-- List to display reminders -->
+                <ul id="reminderList">
+                    <li data-event-id="1">
+                        <strong>Raison du rendez-vous</strong>
+                        - Event Description on Event Date
+                        <button class="delete-event" onclick="deleteEvent(1)">
+                            Delete
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="right">
+            <h3 id="monthAndYear"></h3>
+            <div class="button-container-calendar">
+                <button id="previous" onclick="previous()">
+                    ‹
+                </button>
+                <button id="next" onclick="next()">
+                    ›
+                </button>
+            </div>
+            <table class="table-calendar" id="calendar" data-lang="fr">
+                <thead id="thead-month"></thead>
+                <!-- Table body for displaying the calendar -->
+                <tbody id="calendar-body"></tbody>
+            </table>
+            <div class="footer-container-calendar">
+                <label for="month">Aller a: </label>
+                <!-- Dropdowns to select a specific month and year -->
+                <select id="month" onchange="jump()">
+                    <option value=0>Jan</option>
+                    <option value=1>Fev</option>
+                    <option value=2>Mar</option>
+                    <option value=3>Avr</option>
+                    <option value=4>Mai</option>
+                    <option value=5>Juin</option>
+                    <option value=6>Juil</option>
+                    <option value=7>Aout</option>
+                    <option value=8>Sept</option>
+                    <option value=9>Oct</option>
+                    <option value=10>Nov</option>
+                    <option value=11>Dec</option>
+                </select>
+                <!-- Dropdown to select a specific year -->
+                <select id="year" onchange="jump()"></select>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Include the JavaScript file for the calendar functionality -->
+<script src="./script.js"></script>
 
 </body>
+
 </html>
