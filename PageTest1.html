@@ -15,9 +15,9 @@
 
 <body>
 <!-- Barre de menu -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #a8d1ee;">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fs-5" style="background-color: #a8d1ee;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">SantéPourTous</a>
+        <a class="navbar-brand fw-bold" href="#">SantéPourTous</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -68,23 +68,21 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-2">
-            Jane Doe
+            <h2>Jane Doe</h2>
         </div>
-        <div class="col">
-            <h2>Accueil</h2>
-        </div>
+
     </div>
     <div class="row">
-        <div class="d-flex align-items-start">
+        <div class="d-flex align-items-start bg-body-tertiary fs-5 " >
             <div class="nav flex-column nav-pills me-3 col-2" id="v-pills-tab" role="tablist"
                  aria-orientation="vertical">
-                <button class="nav-link" id="v-pills-notification-tab" data-bs-toggle="pill"
+                <button class="nav-link text-start" id="v-pills-notification-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-notification" type="button" role="tab"
-                        aria-controls="v-pills-notification" aria-selected="false" disabled>Notifications</button>
-                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        aria-controls="v-pills-notification" aria-selected="false" >Notifications</button>
+                <button class="nav-link text-start" id="v-pills-messages-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
                         aria-selected="false" disabled>Messages</button>
-                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                <button class="nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
                         aria-selected="true">Profil</button>
             </div>
@@ -119,7 +117,7 @@
                         <div class="tab-pane fade show active" id="personal-tab-pane" role="tabpanel"
                              aria-labelledby="personal-tab" tabindex="0">
                             <form class="row g-3 needs-validation" novalidate>
-                                <div class="col-md-4">
+                                <div class="col-md-7">
                                     <label for="validationCustom01" class="form-label">Prenom</label>
                                     <input type="text" class="form-control" id="validationCustom01" value="Mark"
                                            required>
@@ -127,7 +125,7 @@
                                         Bon!
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-7">
                                     <label for="validationCustom02" class="form-label">Nom</label>
                                     <input type="text" class="form-control" id="validationCustom02" value="Otto"
                                            required>
@@ -136,8 +134,8 @@
                                     </div>
                                 </div>
                                 <!-- Probleme avec radio bouton a fixer -->
-                                <div class=" btn-group col-md-4" role="group">
-                                    <label for="validationCustom02" class="form-label">Genre</label>
+                                <div class=" btn-group col-md-7" role="group">
+                                    <label for="validationCustom02" class="form-label">Genre </label>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                id="inlineRadio1" value="option1">
@@ -149,7 +147,7 @@
                                         <label class="form-check-label" for="inlineRadio2">F</label>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-7">
                                     <label for="validationCustom03" class="form-label">Numero d'assurance
                                         maladie</label>
                                     <input type="text" class="form-control" id="validationCustom03" required>
@@ -157,7 +155,7 @@
                                         Bon!
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-7">
                                     <label for="validationCustom04" class="form-label">Numero de
                                         sequence</label>
                                     <input type="text" class="form-control" id="validationCustom04" required>
@@ -165,14 +163,14 @@
                                         Bon!
                                     </div>
                                 </div>
-                                <div class="md-form md-outline input-with-post-icon datepicker col-md-6">
+                                <div class="md-form md-outline input-with-post-icon datepicker col-md-7">
                                     <label for="validationCustom05" class="form-label">Date de
                                         naissance</label>
                                     <input placeholder="Select date" type="date" id="example" class="form-control">
 
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-7">
                                     <label for="validationCustom05" class="form-label">Numero et nom de la
                                         rue</label>
                                     <input type="text" class="form-control" id="validationCustom05" required>
@@ -181,14 +179,14 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-7">
                                     <label for="validationCustom06" class="form-label">Ville</label>
                                     <input type="text" class="form-control" id="validationCustom06" required>
                                     <div class="invalid-feedback">
                                         Veuillez sairsir une ville.
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-7">
                                     <label for="validationCustom07" class="form-label">Province</label>
                                     <select class="form-select" id="validationCustom07" required>
                                         <option disabled value="">Selectionner...</option>
@@ -198,7 +196,7 @@
                                         Veuillez choisir une province.
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-7">
                                     <label for="validationCustom08" class="form-label">Code postal</label>
                                     <input type="text" class="form-control" id="validationCustom08" required>
                                     <div class="invalid-feedback">
@@ -226,7 +224,7 @@
                         <div class="tab-pane fade" id="medical-tab-pane" role="tabpanel"
                              aria-labelledby="medical-tab" tabindex="0">
                             <form class="row g-3 needs-validation" novalidate>
-                                <div class="col-md-12">
+                                <div class="col-md-7">
                                     <label for="validationCustom01" class="form-label">Mon medecin de
                                         famille</label>
                                     <input type="text" class="form-control" id="validationCustom09" value="Medecin"
@@ -235,7 +233,7 @@
                                         Bon!
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-7">
                                     <label for="validationCustom09" class="form-label">Mon infirmier</label>
                                     <input type="text" class="form-control" id="validationCustom10"
                                            value="Infirmier" required>
@@ -243,7 +241,7 @@
                                         Bon!
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-7">
                                     <label for="validationCustom10" class="form-label">Mon m&eacute;decin
                                         interne</label>
                                     <input type="text" class="form-control" id="validationCustom11" value="Interne"
@@ -252,7 +250,7 @@
                                         Bon!
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-7">
                                     <label for="validationCustom12" class="form-label">Mes antecedents
                                         m&eacute;dicaux</label>
                                     <input type="text" class="form-control" id="validationCustom12" required>
@@ -260,7 +258,7 @@
                                         Bon!
                                     </div>
                                 </div>
-                                <div class="md-form md-outline input-with-post-icon datepicker col-md-6">
+                                <div class="md-form md-outline input-with-post-icon datepicker col-md-7">
                                     <label for="validationCustom05" class="form-label">Mes
                                         m&eacute;dicaments</label>
                                     <input type="text" class="form-control" id="validationCustom13" required>
@@ -293,6 +291,8 @@
         </div>
     </div>
 </div>
+
+
 
 <!--Bootstrap JS-->
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
