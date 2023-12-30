@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        /* Ajoutez des styles CSS pour les classes disponibles et non disponibles */
+        .available {
+            background-color: #8eff8e; /* Couleur pour les dates disponibles */
+        }
+
+        .date-picker {
+            cursor: pointer;
+        }
+
+        /* Styles pour la tooltip des événements */
+        .event-tooltip {
+            border: 1px solid #ccc;
+            padding: 5px;
+            background-color: #fff;
+            position: absolute;
+            z-index: 1;
+            max-width: 200px;
+        }
+    </style>
+
+    <title>Accueil médecin</title>
+</head>
+<body>
+<!-- Barre de menu -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary fs-5" style="background-color: #a8d1ee;">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">SantéPourTous</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false"> Gestion des disponibilités
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="ajouterDispo.html">Ajouter des disponibilités</a></li>
+                        <li><a class="dropdown-item" href="modifierDispo.html">Modifier des disponibilités</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="EnvoyerInvitation.html">Envoyer une invitation</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="ConsulterRendezVous.html">Consulter mes rendez-vous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ListeDeMesPatients.html">Liste de mes patients</a>
+                </li>
+
+                <li class="nav-item offset-1">
+                    <a class="nav-link" href="deconexion.html">Deconnexion</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <h2>Médecin Jane Doe</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="d-flex align-items-start bg-body-tertiary fs-5 " >
+            <div class="nav flex-column nav-pills me-3 col-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link text-start" id="v-pills-notification-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-notification" type="button" role="tab" aria-controls="v-pills-notification" aria-selected="false" >Notifications</button>
+                <button class="nav-link text-start" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                        aria-selected="false" disabled>Messages</button>
+                <button class="nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="true">Profil</button>
+            </div>
+
+            <div class="tab-content col" id="v-pills-tabContent">
+                <div class="tab-pane fade" id="v-pills-notification" role="tabpanel" aria-labelledby="v-pills-notification-tab" tabindex="0">Lorem 2ipsum dolor sit amet consectetur adipisicing elit. In, laborum delectus? Velit cumque quis, exercitationem repellendus pariatur nisi totam in aliquid fugit praesentium doloremque, molestias quo quidem aperiam? Aspernatur, assumenda.</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">Lorem 3ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptatum, incidunt tempora rem sapiente fugit autem doloribus quo iusto vel ipsa eaque, repellat tempore minus quae sunt porro numquam id. </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="personal-tab" data-bs-toggle="tab"
+                                    data-bs-target="#personal-tab-pane" type="button" role="tab"
+                                    aria-controls="personal-tab-pane" aria-selected="true">Personnel</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="medical-tab" data-bs-toggle="tab"
+                                    data-bs-target="#medical-tab-pane" type="button" role="tab"
+                                    aria-controls="medical-tab-pane" aria-selected="false">Medical</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="personal-tab-pane" role="tabpanel" aria-labelledby="personal-tab" tabindex="0">
+                            <form class="row g-3 needs-validation" novalidate>
+                                <!-- ... Vos champs de formulaire ... -->
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="medical-tab-pane" role="tabpanel" aria-labelledby="medical-tab" tabindex="0">
+                            <form class="row g-3 needs-validation" novalidate>
+                                <!-- ... Vos champs de formulaire ... -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+</html>
