@@ -1,0 +1,73 @@
+
+
+.navbar-nav .dropdown-menu {
+    display: none;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/*Hauteur de la barre de navigation peut être modifiée*/
+.navbar {
+    height: 100px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: 60px; /* Largeur de l'image */
+    height: auto; /* Hauteur Auto pour le maintien du ratio hauteur/largeur */
+    margin-right: 10px; /* Espace à droite de l'image*/
+}
+
+.navbar-brand .textLogo {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.2rem; /* Taille du texte du logo*/
+}
+
+.navbar-brand .textLogo .titreLogo {
+    font-family: 'Leckerli One', sans-serif;
+    /* Style de la police issu de Google fonts */
+}
+
+/* Couleur initiale du background #4885ed */
+.stylePersoBarreVerticale {
+    background-color: dimgray;
+    max-width: 200px; /* Largeur de la barre verticale */
+    width: 100%; /* barre verticale prend toute la largeur */
+    height: 100vh;
+    margin-left: 0;
+    overflow-x: hidden; /* Masquer les débordements horizontales */
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #3498db;
+}
