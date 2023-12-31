@@ -1,8 +1,20 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-GLhlTQ8i04FZ5L5nfsO6AvmokBP4tuKKA8fNEH+9QF2t4E+Em/kisjFQV5trn2x4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="pageAcceuil.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
-<header>
+<header class="head">
     <nav>
         <a class="logo" href="#">  SANTÉPOURTOUS</a>
         <div >
@@ -14,13 +26,16 @@
             <div class="dropdown">
                 <a href="#" class="button"><i class="fas fa-user"></i>Connexion <i class="fas fa-chevron-down"></i></a>
                 <div class="dropdown-content">
-                    <a href="connexionPatient.html">Patient</a>
-                    <a href="connexionMedecin.html">Medecin</a>
+                    <a href="pageConnexionPatient.html">Patient</a>
+                    <a href="pageConnexionMedecin.html">Medecin</a>
                 </div>
             </div>
-            <a href="creeCompte.html" class="button">Créer un compte</a>
+            <a href="pageCreeationCompte.html" class="button">Créer un compte</a>
         </div>
-    </nav>2
+        <div class="ham-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
 </header>
 
 </body>
@@ -34,15 +49,15 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active c-item">
-                <img src="/img/photo1.jpeg" class="d-block w-100 c-img" alt="Slide 1">
+                <img src="img/photo3.jpeg" class="d-block w-100 c-img" alt="Slide 1">
                 <div class="carousel-caption top-0 mt-4">
                     <p class="mt-5 fs-3 text-uppercase">Bienvenue merci bye</p>
                     <h1 class="display-1 fw-bolder text-capitalize">hello wolrd</h1>
-                    <a href="connexionPatient.html"> <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Prendre un rendez-vous</button></a>
+                    <a href="creationtComptePatient.js"> <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Prendre un rendez-vous</button></a>
                 </div>
             </div>
             <div class="carousel-item c-item">
-                <img src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?fit=crop&w=2134&q=100" class="d-block w-100 c-img" alt="Slide 2">
+                <img src="img/photo1.jpeg" class="d-block w-100 c-img" alt="Slide 1">
                 <div class="carousel-caption top-0 mt-4">
                     <p class="text-uppercase fs-3 mt-5">Lorem ipsum dolor sit amet</p>
                     <p class="display-1 fw-bolder text-capitalize">Lorem ipsum dolor </p>
@@ -51,7 +66,7 @@
                 </div>
             </div>
             <div class="carousel-item c-item">
-                <img src="https://images.unsplash.com/photo-1612686635542-2244ed9f8ddc?fit=crop&w=2070&q=100" class="d-block w-100 c-img" alt="Slide 3">
+                <img src="img/photo1.jpeg" class="d-block w-100 c-img" alt="Slide 1">
                 <div class="carousel-caption top-0 mt-4">
                     <p class="text-uppercase fs-3 mt-5">kwento mecdivo iset</p>
                     <p class="display-1 fw-bolder text-capitalize">lopseum iranou discote pius </p>
@@ -106,7 +121,7 @@
 <section class="pricing-section" id="tarifs">
     <h2 class="head_text">Tarifs</h2>
     <div class="pricing-container">
-        <!-- Pricing Item 1 -->
+        
         <div class="pricing-item">
             <h3 class="pricing-title">Soins de saté mental</h3>
             <p class="pricing-price">$50</p>
@@ -118,7 +133,7 @@
             </ul>
         </div>
 
-        <!-- Pricing Item 2 -->
+        
         <div class="pricing-item">
             <h3 class="pricing-title">Consultation médicsl</h3>
             <p class="pricing-price">$80</p>
@@ -141,8 +156,6 @@
             </ul>
         </div>
 
-
-
     </div>
 </section>
 <section class="patient" id="patient">
@@ -159,17 +172,13 @@
         </div>
         <div class="image">
 
-            <img src="/img/photo2.avif">
+            <img src="img/photo2.avif" >
+
 
         </div>
     </div>
 
-
-
-
-
 </section>
-
 
 <footer>
     <div class="footer">

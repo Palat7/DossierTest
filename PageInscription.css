@@ -1,0 +1,59 @@
+.step {
+    display: none;
+}
+
+html body{
+    background-color: #6c757d36;
+}
+
+.container .form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #f7f7ff;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.container label{
+
+    font-size: 10px;
+}
+
+.container-stylish {
+    background-color: transparent;
+    padding: 30px;
+
+}
+.step.active {
+    display: block;
+
+}
+
+
+label {
+    font-weight: bold;
+}
+
+
+.container{
+    background-color: white;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal{
+    background-color: lightgray;
+}
+
+.modal button{
+    background-color: #3cbfe7;
+}
