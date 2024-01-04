@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creation de compte Clinique</title>
+    <link rel="stylesheet" href="PageInscriptionClinique.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <style>
+        .verifierInformation {
+            min-height: 75vh;     /* 75% de la hauteur de la fenêtre */
+        }
+
+
+
+        .paraDejaUnCompte {
+            text-align: right;
+        }
+
+        .container {
+
+            width: 630px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5 container-stylish">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form id="signupForm">
+
+                <div class="step active" id="step1">
+
+                    <h4 class="text-center mb-4">Veuillez renseigner les informations de votre clinique</h4>
+
+                    <div class="form-group">
+                        <label for="nomClinique">Nom de la clinique</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" id="nomClinique"
+                                       required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group text-center mt-4 mb-0  ">
+                            <h6>Coordonnées de la clinique</h6>
+                            <!-- ... autres champs du formulaire ... -->
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="numRueClinique">Numéro de la rue</label>
+                            <input type="text" class="form-control" id="numRueClinique" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nomRueClinique">Nom de la rue</label>
+                            <input type="text" class="form-control" id="nomRueClinique" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="codePostalClinique">Code postal</label>
+                            <input type="text" class="form-control" id="codePostalClinique" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numTelephoneClinique">Numéro de téléphone</label>
+                            <input type="text" class="form-control" id="numTelephoneClinique" placeholder="450-000-0000"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courrielClinique">Adresse courriel</label>
+                            <input type="email" class="form-control" id="courrielClinique" placeholder="axy@hotmail.com"
+                                   required>
+                        </div>
+
+
+                        <div>
+                            <p class="paraDejaUnCompte">Déjà un compte? <a
+                                    href="connexionClinique.html">Connectez-vous</a></p>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(1)">Suivant</button>
+                    </div>
+
+                </div>
+
+                <div class="step verifierInformation" id="step2">
+                    <h2>Confirmation</h2>
+
+
+                    <div class="card confirmation-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Veuillez verifier vos informations avant de
+                                soumettre </h5>
+                            <p class="card-text "><strong>Nom de la clinique:</strong> <span
+                                    id="confirmNomClinique"></span></p>
+                            <p class="card-text"><strong>Numéro de rue:</strong> <span
+                                    id="confirmNumeroRueClinique"></span></p>
+                            <p class="card-text"><strong>Nom de rue:</strong> <span
+                                    id="confirmNomRueClinique"></span></p>
+                            <p class="card-text"><strong>Code postal:</strong> <span
+                                    id="confirmCodePostalClinique"></span></p>
+                            <p class="card-text"><strong>Numéro de téléphone:</strong> <span
+                                    id="confirmNumTelephoneClinique"></span></p>
+                            <p class="card-text"><strong>Courriel:</strong> <span
+                                    id="confirmCourrielClinique"></span></p>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="my-3">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep(2)">Retour</button>
+                        <button type="button" class="btn btn-success" onclick="submitForm()">Soumettre</button>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="successModal" data-backdrop="static" tabindex="-1" role="dialog"
+     aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-body">
+
+                <p>votre demande d"inscription a bien été envoyé. Si elle est acceptée,
+                    l'administrateur vous enverra votre identifiant et mot de passe à l'adresse
+                    courriel que vous avez fournie </p>
+                <p>À présent, vous allez être redirigé à la page d'accueil</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="redirectToHomePage()">
+                    Ok
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="PageInscriptionClinique.js"></script>
+
+</body>
+</html>
