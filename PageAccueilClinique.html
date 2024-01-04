@@ -9,97 +9,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha384-GLhlTQ8i04FZ5L5nfsO6AvmokBP4tuKKA8fNEH+9QF2t4E+Em/kisjFQV5trn2x4" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Leckerli One">
-    <style>
+    <link rel="stylesheet" href="styleRetouche.css">
 
-
-        .navbar-nav .dropdown-menu {
-            display: none;
-
-        }
-
-        .navbar-nav .dropdown:hover .dropdown-menu {
-            display: block;
-
-        }
-
-
-        /*Hauteur de la barre de navigation peut être modifiée*/
-        .navbar {
-            height: 100px;
-
-
-        }
-
-
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-brand img {
-            width: 60px; /* Largeur de l'image */
-            height: auto; /* Hauteur Auto pour le maintien du ratio hauteur/largeur */
-            margin-right: 10px; /* Espace à droite de l'image*/
-        }
-
-        .navbar-brand .textLogo {
-            display: flex;
-            flex-direction: column;
-            font-weight: bold;
-            font-size: 1.2rem; /* Taille du texte du logo*/
-        }
-
-        .navbar-brand .textLogo .titreLogo {
-            font-family: 'Leckerli One', sans-serif;
-            /* Style de la police issu de Google fonts */
-        }
-
-
-        /*
-
-                body::before {
-                    content: "";
-                    background-image: url('Logo4.png');
-
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-position: center center;
-                    background-size: cover;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: -1;
-                    opacity: 0.5;
-
-
-                    @media (min-width: 768px) {
-                        width: calc(100% - 200px);
-                        left: 200px;
-                    }
-                }
-
-        */
-
-
-        /* Couleur initiale du background #4885ed */
-        .stylePersoBarreVerticale {
-            background-color: dimgray;
-            max-width: 200px; /* Largeur de la barre verticale */
-            width: 100%; /* barre verticale prend toute la largeur */
-            height: 100vh;
-            margin-left: 0;
-            overflow-x: hidden; /* Masquer les débordements horizontales */
-        }
-
-        .InfoGeneraleClinique{
-            color: dodgerblue;
-        }
-
-
-    </style>
 
     <title>Accueil Clinique</title>
 </head>
@@ -107,17 +29,12 @@
 <body>
 <!-- Barre de menu -->
 <!--Couleur initiale de la barre de navigation #a8d1ee-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary fs-5 " style="background-color: lightskyblue">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fs-5 ">
     <div class="container-fluid">
 
         <a class="navbar-brand fw-bold" href="#">
-            <img src="Logo4.png" alt="SantéPourTous Logo">
-            <span class="textLogo">
-                <span class="titreLogo">Santé</span>
-                <span class="titreLogo">Pour</span>
-                <span class="titreLogo">Tous</span>
-            </span></a>
-
+            <img src="Logo4.png" alt="SantéPourTous Logo"> </a>
+        <a class="navbar-brand fw-bold textLogo me-5" href="#">SantéPourTous</a>
 
         <!-- Déterminer nécessité de ce bouton -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -127,87 +44,67 @@
         </button>
 
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse " id="navbarNavDropdown">
 
-                <!--Offset ajouté pour l'accueil-->
-                <li class="nav-item offset-2 ">
-                    <!--     -->
+            <!--ms-auto ajouté pour mieux répartir les éléments le long de la barre de navigation-->
+            <ul class="navbar-nav ms-auto">
+
+
+
+                <!--
+                <li class="nav-item me-2 ">
+
                     <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
                 </li>
+-->
 
 
-                <li class="nav-item ">
+                <!--me-5 inclus pour ajouter de l'espace à droite de l'élément-->
+                <li class="nav-item me-5">
                     <a class="nav-link " href="" role="button"
                        aria-expanded="false"> Liste des services
                     </a>
 
                 </li>
 
+                <!--me-5 inclus pour ajouter de l'espace à droite de l'élément-->
+                <li class="nav-item me-5">
 
-                <li class="nav-item ">
-                    <!-- Offset de 2 ajouté ici -->
                     <a class="nav-link " href="ListeMedecin.html">Liste des médecins</a>
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="ListePatientClinique.html">Liste des patients</a>
-                </li>
-
-
-                <li class="nav-item  ">
-                    <a class="nav-link offset-4 " href="deconexion.html">Deconnexion</a>
+                    <a class="nav-link " href="ListePatientClinique.html">Liste des patients</a>
                 </li>
             </ul>
+
+            <!--Classe ms-auto ajoutée ici. Elle place l'élément à droite dans une disposition de langue qui va de gauche à droite -->
+            <ul class="navbar-nav ml-auto ms-auto ">
+                <li class="nav-item ">
+
+                    <button class="btn btn-primary ms-5 btn-lg" type="submit">Deconnexion</button>
+                </li>
+
+
+            </ul>
+
+
         </div>
     </div>
+
+
 </nav>
 
 
 <div class="container-fluid ">
-
-    <!--
-    <div class="row">
-        <div class="col-2">
-            <h2>Médecin Jane Doe</h2>
-        </div>
-
-
-    </div>
-    -->
-
-
-    <!--
-
-
-    <div class="row">
-        <div class="d-flex align-items-start bg-body-tertiary fs-5 ">
-            <div class="nav flex-column nav-pills me-3 col-2" id="v-pills-tab" role="tablist"
-                 aria-orientation="vertical">
-                <button class="nav-link text-start bg-secondary text-light" id="v-pills-notification-tab" data-bs-toggle="pill"
-                        data-bs-target="#v-pills-notification" type="button" role="tab"
-                        aria-controls="v-pills-notification" aria-selected="false">Notifications
-                </button>
-                <button class="nav-link text-start bg-secondary text-light" id="v-pills-messages-tab" data-bs-toggle="pill"
-                        data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
-                        aria-selected="false" disabled>Messages
-                </button>
-                <button class="nav-link text-start bg-secondary text-light" id="v-pills-profile-tab" data-bs-toggle="pill"
-                        data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
-                        aria-selected="true">Profil
-                </button>
-            </div>
-
--->
-
 
     <div class="container-fluid p-0">
         <div class="row">
             <div class="col-2 p-0 ">
 
                 <!--Classe flex column ajouter pour avoir les boutons dans un seul bloc -->
-                <!-- Une classe stylePersoBarreVerticale définie pour couleur du background -->
+                <!-- Une classe stylePersoBarreVerticale définie au niveau du CSS pour personnaliser ce bloc-->
                 <!--disposition flex column appliquée pour aligner verticalement les boutons, nav-pills appliqué pour l'apparence
                 sous forme de pill (onglets sous formes arrondies) -->
 
@@ -219,12 +116,14 @@
 
                     <button class="nav-link  text-start text-white  border" id="v-pills-profile-tab"
                             data-bs-toggle="pill"
-                            data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                            data-bs-target="#formulaireProfilClinique" type="button" role="tab" aria-controls="v-pills-profile"
                             aria-selected="true"><i class="fa fa-info-circle me-2"></i> Infos sur la clinique
                     </button>
+
+                    <!-- L'attribut data-bs-target est à définir pour le bouton paramètres -->
                     <button class="nav-link  text-start text-white  border" id="v-pills-autre-tab"
                             data-bs-toggle="pill"
-                            data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                           type="button" role="tab" aria-controls="v-pills-profile"
                             aria-selected="true"><i class="fa fa-gear me-2"></i>Paramètres
                     </button>
                 </div>
@@ -250,7 +149,7 @@
                         rem sapiente fugit autem doloribus quo
                         iusto vel ipsa eaque, repellat tempore minus quae sunt porro numquam id.
                     </div>
-                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                    <div class="tab-pane fade" id="formulaireProfilClinique" role="tabpanel"
                          aria-labelledby="v-pills-profile-tab" tabindex="0">
 
                         <h2 class="text-center pt-2 InfoGeneraleClinique">Informations générales</h2>
@@ -264,8 +163,10 @@
                                     <!--Les ids sont à changer-->
 
                                     <div class="col-md-7">
-                                        <label for="validationCustom01" class="form-label fw-bold">Nom de la clinique</label>
-                                        <input type="text" class="form-control" id="validationCustom01" value="Clinique Belle vue"
+                                        <label for="validationCustom01" class="form-label fw-bold">Nom de la
+                                            clinique</label>
+                                        <input type="text" class="form-control" id="validationCustom01"
+                                               value="Clinique Belle vue"
                                                required>
                                         <div class="valid-feedback">
                                             Bon!
@@ -283,14 +184,16 @@
 
                                     <div class="col-md-7">
                                         <label for="validationCustom03" class="form-label fw-bold">Nom de rue </label>
-                                        <input type="text" class="form-control" id="validationCustom03" value="Rue Durocher" required>
+                                        <input type="text" class="form-control" id="validationCustom03"
+                                               value="Durocher" required>
                                         <div class="valid-feedback">
                                             Bon!
                                         </div>
                                     </div>
                                     <div class="col-md-7">
                                         <label for="validationCustom04" class="form-label fw-bold">Code postal</label>
-                                        <input type="text" class="form-control" id="validationCustom04" value="H7E 9C3" required>
+                                        <input type="text" class="form-control" id="validationCustom04" value="H7E 9C3"
+                                               required>
                                         <div class="valid-feedback">
                                             Bon!
                                         </div>
@@ -304,7 +207,8 @@
                                     <div class="col-md-7">
                                         <label for="validationCustom05" class="form-label fw-bold">Courriel</label>
 
-                                        <input type="email" class="form-control" id="validationCustom05" value="Bellevue@hotmail.com" required>
+                                        <input type="email" class="form-control" id="validationCustom05"
+                                               value="Bellevue@hotmail.com" required>
                                         <div class="valid-feedback">
                                             Bon!
                                         </div>
@@ -319,6 +223,20 @@
     </div>
 
 </div>
+
+
+<footer>
+    <div class="footer">
+        <p>&copy; 2023 SANTÉPOURTOUS. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+    </div>
+
+</footer>
 
 <!--Bootstrap JS-->
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
